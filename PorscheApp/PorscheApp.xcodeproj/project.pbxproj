@@ -3,70 +3,132 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		666492F82A1D78EA00522711 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666492F72A1D78EA00522711 /* AppDelegate.swift */; };
-		666492FA2A1D78EA00522711 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666492F92A1D78EA00522711 /* SceneDelegate.swift */; };
-		666492FC2A1D78EA00522711 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666492FB2A1D78EA00522711 /* ViewController.swift */; };
-		666492FF2A1D78EA00522711 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666492FD2A1D78EA00522711 /* Main.storyboard */; };
-		666493012A1D78F800522711 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 666493002A1D78F800522711 /* Assets.xcassets */; };
-		666493042A1D78F800522711 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666493022A1D78F800522711 /* LaunchScreen.storyboard */; };
-		6664930F2A1D78F800522711 /* PorscheAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664930E2A1D78F800522711 /* PorscheAppTests.swift */; };
-		6664931A2A1D78F800522711 /* PorscheAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666493192A1D78F800522711 /* PorscheAppUITests.swift */; };
+		666016A72A2032010046B384 /* BreedsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666016A62A2032010046B384 /* BreedsViewModelTest.swift */; };
+		666016AD2A20328E0046B384 /* StubGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666016AC2A20328E0046B384 /* StubGenerator.swift */; };
+		666016BE2A2033320046B384 /* Breeds.json in Resources */ = {isa = PBXBuildFile; fileRef = 666016BD2A2033320046B384 /* Breeds.json */; };
+		666016C62A2033BB0046B384 /* ImagesBreed.json in Resources */ = {isa = PBXBuildFile; fileRef = 666016C52A2033BB0046B384 /* ImagesBreed.json */; };
+		666016CB2A2033FF0046B384 /* Error400.json in Resources */ = {isa = PBXBuildFile; fileRef = 666016CA2A2033FF0046B384 /* Error400.json */; };
+		666016D02A203F4D0046B384 /* MockDogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666016CF2A203F4D0046B384 /* MockDogService.swift */; };
+		666016DB2A2042310046B384 /* BreedsViewController+ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666016DA2A2042310046B384 /* BreedsViewController+ErrorHandling.swift */; };
+		666016E02A2042A10046B384 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666016DF2A2042A10046B384 /* UIViewController+Extension.swift */; };
+		666493512A1D807400522711 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666493502A1D807400522711 /* AppDelegate.swift */; };
+		666493532A1D807400522711 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666493522A1D807400522711 /* SceneDelegate.swift */; };
+		666493552A1D807400522711 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666493542A1D807400522711 /* ViewController.swift */; };
+		666493582A1D807400522711 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666493562A1D807400522711 /* Main.storyboard */; };
+		6664935A2A1D807F00522711 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 666493592A1D807F00522711 /* Assets.xcassets */; };
+		6664935D2A1D807F00522711 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6664935B2A1D807F00522711 /* LaunchScreen.storyboard */; };
+		666493682A1D807F00522711 /* PorscheAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666493672A1D807F00522711 /* PorscheAppTests.swift */; };
+		666493732A1D807F00522711 /* PorscheAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666493722A1D807F00522711 /* PorscheAppUITests.swift */; };
+		666493912A1D86B000522711 /* PorscheApiNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = 666493902A1D86B000522711 /* PorscheApiNetwork */; };
+		666493A32A1D900500522711 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 666493A22A1D900500522711 /* Config.plist */; };
+		666493BE2A1D9E8100522711 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666493BD2A1D9E8100522711 /* Coordinator.swift */; };
+		666493C42A1DA34900522711 /* BreedsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666493C32A1DA34900522711 /* BreedsCoordinator.swift */; };
+		666493D02A1DA45D00522711 /* DogBreedDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666493CF2A1DA45D00522711 /* DogBreedDetailCoordinator.swift */; };
+		666493D72A1DA63100522711 /* BreedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666493D62A1DA63100522711 /* BreedsViewController.swift */; };
+		666493E22A1E5A3100522711 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666493E12A1E5A3100522711 /* AppCoordinator.swift */; };
+		666493E82A1E5F9800522711 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666493E72A1E5F9800522711 /* Breed.swift */; };
+		666493F32A1E679F00522711 /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666493F22A1E679F00522711 /* Dimensions.swift */; };
+		666493FB2A1E6B3400522711 /* BreedCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666493FA2A1E6B3400522711 /* BreedCollectionCell.swift */; };
+		666494052A1E6F2D00522711 /* BreedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666494042A1E6F2D00522711 /* BreedsViewModel.swift */; };
+		6664940A2A1E6F8F00522711 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666494092A1E6F8F00522711 /* UICollectionView+Extension.swift */; };
+		666494132A1E8BED00522711 /* DogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666494122A1E8BED00522711 /* DogService.swift */; };
+		6664941B2A1E904A00522711 /* ConstantsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664941A2A1E904A00522711 /* ConstantsManager.swift */; };
+		666494202A1E921100522711 /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664941F2A1E921100522711 /* ApiProvider.swift */; };
+		6664942B2A1EC35200522711 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664942A2A1EC35200522711 /* UIImageView+Extension.swift */; };
+		666494312A1EEC6400522711 /* DogBreedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666494302A1EEC6400522711 /* DogBreedDetailViewController.swift */; };
+		6664943F2A1FC70B00522711 /* BreedsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664943E2A1FC70B00522711 /* BreedsResponse.swift */; };
+		666494452A1FCA0D00522711 /* DogBreedDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666494442A1FCA0D00522711 /* DogBreedDetailViewModel.swift */; };
+		6664944B2A1FEB4D00522711 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664944A2A1FEB4D00522711 /* ImageCache.swift */; };
+		666494502A1FEB8E00522711 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664944F2A1FEB8E00522711 /* ImageLoader.swift */; };
+		6664945B2A2002F000522711 /* CarrouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664945A2A2002F000522711 /* CarrouselLayout.swift */; };
+		666494602A20045900522711 /* CarrouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6664945F2A20045900522711 /* CarrouselCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6664930B2A1D78F800522711 /* PBXContainerItemProxy */ = {
+		666493642A1D807F00522711 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 666492EC2A1D78E900522711 /* Project object */;
+			containerPortal = 666493452A1D807300522711 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 666492F32A1D78EA00522711;
+			remoteGlobalIDString = 6664934C2A1D807400522711;
 			remoteInfo = PorscheApp;
 		};
-		666493162A1D78F800522711 /* PBXContainerItemProxy */ = {
+		6664936F2A1D807F00522711 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 666492EC2A1D78E900522711 /* Project object */;
+			containerPortal = 666493452A1D807300522711 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 666492F32A1D78EA00522711;
+			remoteGlobalIDString = 6664934C2A1D807400522711;
 			remoteInfo = PorscheApp;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		666492F42A1D78EA00522711 /* PorscheApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PorscheApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		666492F72A1D78EA00522711 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		666492F92A1D78EA00522711 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		666492FB2A1D78EA00522711 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		666492FE2A1D78EA00522711 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		666493002A1D78F800522711 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		666493032A1D78F800522711 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		666493052A1D78F800522711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6664930A2A1D78F800522711 /* PorscheAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PorscheAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6664930E2A1D78F800522711 /* PorscheAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorscheAppTests.swift; sourceTree = "<group>"; };
-		666493102A1D78F800522711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		666493152A1D78F800522711 /* PorscheAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PorscheAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		666493192A1D78F800522711 /* PorscheAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorscheAppUITests.swift; sourceTree = "<group>"; };
-		6664931B2A1D78F800522711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		666016A62A2032010046B384 /* BreedsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewModelTest.swift; sourceTree = "<group>"; };
+		666016AC2A20328E0046B384 /* StubGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubGenerator.swift; sourceTree = "<group>"; };
+		666016BD2A2033320046B384 /* Breeds.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Breeds.json; sourceTree = "<group>"; };
+		666016C52A2033BB0046B384 /* ImagesBreed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ImagesBreed.json; sourceTree = "<group>"; };
+		666016CA2A2033FF0046B384 /* Error400.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Error400.json; sourceTree = "<group>"; };
+		666016CF2A203F4D0046B384 /* MockDogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDogService.swift; sourceTree = "<group>"; };
+		666016DA2A2042310046B384 /* BreedsViewController+ErrorHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BreedsViewController+ErrorHandling.swift"; sourceTree = "<group>"; };
+		666016DF2A2042A10046B384 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		6664934D2A1D807400522711 /* PorscheApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PorscheApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		666493502A1D807400522711 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		666493522A1D807400522711 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		666493542A1D807400522711 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		666493572A1D807400522711 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		666493592A1D807F00522711 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6664935C2A1D807F00522711 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6664935E2A1D807F00522711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		666493632A1D807F00522711 /* PorscheAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PorscheAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		666493672A1D807F00522711 /* PorscheAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorscheAppTests.swift; sourceTree = "<group>"; };
+		666493692A1D807F00522711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6664936E2A1D807F00522711 /* PorscheAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PorscheAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		666493722A1D807F00522711 /* PorscheAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PorscheAppUITests.swift; sourceTree = "<group>"; };
+		666493742A1D807F00522711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		666493A22A1D900500522711 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		666493BD2A1D9E8100522711 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		666493C32A1DA34900522711 /* BreedsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsCoordinator.swift; sourceTree = "<group>"; };
+		666493CF2A1DA45D00522711 /* DogBreedDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedDetailCoordinator.swift; sourceTree = "<group>"; };
+		666493D62A1DA63100522711 /* BreedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewController.swift; sourceTree = "<group>"; };
+		666493E12A1E5A3100522711 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		666493E72A1E5F9800522711 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
+		666493F22A1E679F00522711 /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
+		666493FA2A1E6B3400522711 /* BreedCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCollectionCell.swift; sourceTree = "<group>"; };
+		666494042A1E6F2D00522711 /* BreedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewModel.swift; sourceTree = "<group>"; };
+		666494092A1E6F8F00522711 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		666494122A1E8BED00522711 /* DogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogService.swift; sourceTree = "<group>"; };
+		6664941A2A1E904A00522711 /* ConstantsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsManager.swift; sourceTree = "<group>"; };
+		6664941F2A1E921100522711 /* ApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
+		6664942A2A1EC35200522711 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		666494302A1EEC6400522711 /* DogBreedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedDetailViewController.swift; sourceTree = "<group>"; };
+		6664943E2A1FC70B00522711 /* BreedsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsResponse.swift; sourceTree = "<group>"; };
+		666494442A1FCA0D00522711 /* DogBreedDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogBreedDetailViewModel.swift; sourceTree = "<group>"; };
+		6664944A2A1FEB4D00522711 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		6664944F2A1FEB8E00522711 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		6664945A2A2002F000522711 /* CarrouselLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrouselLayout.swift; sourceTree = "<group>"; };
+		6664945F2A20045900522711 /* CarrouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrouselCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		666492F12A1D78EA00522711 /* Frameworks */ = {
+		6664934A2A1D807400522711 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				666493912A1D86B000522711 /* PorscheApiNetwork in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		666493602A1D807F00522711 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		666493072A1D78F800522711 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		666493122A1D78F800522711 /* Frameworks */ = {
+		6664936B2A1D807F00522711 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,137 +138,338 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		666492EB2A1D78E900522711 = {
+		666016AB2A2032710046B384 /* MockUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				666492F62A1D78EA00522711 /* PorscheApp */,
-				6664930D2A1D78F800522711 /* PorscheAppTests */,
-				666493182A1D78F800522711 /* PorscheAppUITests */,
-				666492F52A1D78EA00522711 /* Products */,
+				666016AC2A20328E0046B384 /* StubGenerator.swift */,
+				666016CF2A203F4D0046B384 /* MockDogService.swift */,
+			);
+			path = MockUtilities;
+			sourceTree = "<group>";
+		};
+		666016BC2A2032FC0046B384 /* MockResponses */ = {
+			isa = PBXGroup;
+			children = (
+				666016BD2A2033320046B384 /* Breeds.json */,
+				666016C52A2033BB0046B384 /* ImagesBreed.json */,
+				666016CA2A2033FF0046B384 /* Error400.json */,
+			);
+			path = MockResponses;
+			sourceTree = "<group>";
+		};
+		666493442A1D807300522711 = {
+			isa = PBXGroup;
+			children = (
+				6664934F2A1D807400522711 /* PorscheApp */,
+				666493662A1D807F00522711 /* PorscheAppTests */,
+				666493712A1D807F00522711 /* PorscheAppUITests */,
+				6664934E2A1D807400522711 /* Products */,
+				6664938F2A1D86B000522711 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		666492F52A1D78EA00522711 /* Products */ = {
+		6664934E2A1D807400522711 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				666492F42A1D78EA00522711 /* PorscheApp.app */,
-				6664930A2A1D78F800522711 /* PorscheAppTests.xctest */,
-				666493152A1D78F800522711 /* PorscheAppUITests.xctest */,
+				6664934D2A1D807400522711 /* PorscheApp.app */,
+				666493632A1D807F00522711 /* PorscheAppTests.xctest */,
+				6664936E2A1D807F00522711 /* PorscheAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		666492F62A1D78EA00522711 /* PorscheApp */ = {
+		6664934F2A1D807400522711 /* PorscheApp */ = {
 			isa = PBXGroup;
 			children = (
-				666492F72A1D78EA00522711 /* AppDelegate.swift */,
-				666492F92A1D78EA00522711 /* SceneDelegate.swift */,
-				666492FB2A1D78EA00522711 /* ViewController.swift */,
-				666492FD2A1D78EA00522711 /* Main.storyboard */,
-				666493002A1D78F800522711 /* Assets.xcassets */,
-				666493022A1D78F800522711 /* LaunchScreen.storyboard */,
-				666493052A1D78F800522711 /* Info.plist */,
+				666493A02A1D8F2600522711 /* Config */,
+				6664939B2A1D8BC100522711 /* Flows */,
+				6664939A2A1D8B9A00522711 /* BusinessLogic */,
+				666493992A1D8B7A00522711 /* Application */,
+				666493982A1D8AFB00522711 /* Utilities */,
+				666493542A1D807400522711 /* ViewController.swift */,
+				666493562A1D807400522711 /* Main.storyboard */,
+				666493592A1D807F00522711 /* Assets.xcassets */,
+				6664935B2A1D807F00522711 /* LaunchScreen.storyboard */,
+				6664935E2A1D807F00522711 /* Info.plist */,
 			);
 			path = PorscheApp;
 			sourceTree = "<group>";
 		};
-		6664930D2A1D78F800522711 /* PorscheAppTests */ = {
+		666493662A1D807F00522711 /* PorscheAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				6664930E2A1D78F800522711 /* PorscheAppTests.swift */,
-				666493102A1D78F800522711 /* Info.plist */,
+				666016BC2A2032FC0046B384 /* MockResponses */,
+				666016AB2A2032710046B384 /* MockUtilities */,
+				666493672A1D807F00522711 /* PorscheAppTests.swift */,
+				666493692A1D807F00522711 /* Info.plist */,
+				666016A62A2032010046B384 /* BreedsViewModelTest.swift */,
 			);
 			path = PorscheAppTests;
 			sourceTree = "<group>";
 		};
-		666493182A1D78F800522711 /* PorscheAppUITests */ = {
+		666493712A1D807F00522711 /* PorscheAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				666493192A1D78F800522711 /* PorscheAppUITests.swift */,
-				6664931B2A1D78F800522711 /* Info.plist */,
+				666493722A1D807F00522711 /* PorscheAppUITests.swift */,
+				666493742A1D807F00522711 /* Info.plist */,
 			);
 			path = PorscheAppUITests;
+			sourceTree = "<group>";
+		};
+		6664938F2A1D86B000522711 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		666493982A1D8AFB00522711 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				666494492A1FEB3500522711 /* Cache */,
+				666493F22A1E679F00522711 /* Dimensions.swift */,
+				666494092A1E6F8F00522711 /* UICollectionView+Extension.swift */,
+				6664941A2A1E904A00522711 /* ConstantsManager.swift */,
+				6664941F2A1E921100522711 /* ApiProvider.swift */,
+				6664942A2A1EC35200522711 /* UIImageView+Extension.swift */,
+				6664945A2A2002F000522711 /* CarrouselLayout.swift */,
+				666016DF2A2042A10046B384 /* UIViewController+Extension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		666493992A1D8B7A00522711 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				666493502A1D807400522711 /* AppDelegate.swift */,
+				666493522A1D807400522711 /* SceneDelegate.swift */,
+				666493E12A1E5A3100522711 /* AppCoordinator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		6664939A2A1D8B9A00522711 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				666494112A1E8BD100522711 /* Services */,
+				666493E62A1E5F8000522711 /* Models */,
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		6664939B2A1D8BC100522711 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				6664939D2A1D8BF900522711 /* Scenes */,
+				6664939C2A1D8BE300522711 /* Coordinator */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		6664939C2A1D8BE300522711 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				666493BD2A1D9E8100522711 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		6664939D2A1D8BF900522711 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				6664939F2A1D8C1D00522711 /* DogBreedDetail */,
+				6664939E2A1D8C1400522711 /* Breeds */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		6664939E2A1D8C1400522711 /* Breeds */ = {
+			isa = PBXGroup;
+			children = (
+				666493D52A1DA61700522711 /* View */,
+				666493D42A1DA60300522711 /* ViewModel */,
+				666493C22A1D9F0B00522711 /* Coordinator */,
+			);
+			path = Breeds;
+			sourceTree = "<group>";
+		};
+		6664939F2A1D8C1D00522711 /* DogBreedDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6664942F2A1EEC4700522711 /* View */,
+				666494432A1FC9EA00522711 /* ViewModel */,
+				666493CE2A1DA44800522711 /* Coordinator */,
+			);
+			path = DogBreedDetail;
+			sourceTree = "<group>";
+		};
+		666493A02A1D8F2600522711 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				666493A22A1D900500522711 /* Config.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		666493C22A1D9F0B00522711 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				666493C32A1DA34900522711 /* BreedsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		666493CE2A1DA44800522711 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				666493CF2A1DA45D00522711 /* DogBreedDetailCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		666493D42A1DA60300522711 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				666494042A1E6F2D00522711 /* BreedsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		666493D52A1DA61700522711 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				666493D62A1DA63100522711 /* BreedsViewController.swift */,
+				666493FA2A1E6B3400522711 /* BreedCollectionCell.swift */,
+				666016DA2A2042310046B384 /* BreedsViewController+ErrorHandling.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		666493E62A1E5F8000522711 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				666493E72A1E5F9800522711 /* Breed.swift */,
+				6664943E2A1FC70B00522711 /* BreedsResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		666494112A1E8BD100522711 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				666494122A1E8BED00522711 /* DogService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6664942F2A1EEC4700522711 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				666494302A1EEC6400522711 /* DogBreedDetailViewController.swift */,
+				6664945F2A20045900522711 /* CarrouselCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		666494432A1FC9EA00522711 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				666494442A1FCA0D00522711 /* DogBreedDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		666494492A1FEB3500522711 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				6664944A2A1FEB4D00522711 /* ImageCache.swift */,
+				6664944F2A1FEB8E00522711 /* ImageLoader.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		666492F32A1D78EA00522711 /* PorscheApp */ = {
+		6664934C2A1D807400522711 /* PorscheApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6664931E2A1D78F800522711 /* Build configuration list for PBXNativeTarget "PorscheApp" */;
+			buildConfigurationList = 666493772A1D807F00522711 /* Build configuration list for PBXNativeTarget "PorscheApp" */;
 			buildPhases = (
-				666492F02A1D78EA00522711 /* Sources */,
-				666492F12A1D78EA00522711 /* Frameworks */,
-				666492F22A1D78EA00522711 /* Resources */,
+				666493492A1D807400522711 /* Sources */,
+				6664934A2A1D807400522711 /* Frameworks */,
+				6664934B2A1D807400522711 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = PorscheApp;
+			packageProductDependencies = (
+				666493902A1D86B000522711 /* PorscheApiNetwork */,
+			);
 			productName = PorscheApp;
-			productReference = 666492F42A1D78EA00522711 /* PorscheApp.app */;
+			productReference = 6664934D2A1D807400522711 /* PorscheApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		666493092A1D78F800522711 /* PorscheAppTests */ = {
+		666493622A1D807F00522711 /* PorscheAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 666493212A1D78F800522711 /* Build configuration list for PBXNativeTarget "PorscheAppTests" */;
+			buildConfigurationList = 6664937A2A1D807F00522711 /* Build configuration list for PBXNativeTarget "PorscheAppTests" */;
 			buildPhases = (
-				666493062A1D78F800522711 /* Sources */,
-				666493072A1D78F800522711 /* Frameworks */,
-				666493082A1D78F800522711 /* Resources */,
+				6664935F2A1D807F00522711 /* Sources */,
+				666493602A1D807F00522711 /* Frameworks */,
+				666493612A1D807F00522711 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6664930C2A1D78F800522711 /* PBXTargetDependency */,
+				666493652A1D807F00522711 /* PBXTargetDependency */,
 			);
 			name = PorscheAppTests;
 			productName = PorscheAppTests;
-			productReference = 6664930A2A1D78F800522711 /* PorscheAppTests.xctest */;
+			productReference = 666493632A1D807F00522711 /* PorscheAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		666493142A1D78F800522711 /* PorscheAppUITests */ = {
+		6664936D2A1D807F00522711 /* PorscheAppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 666493242A1D78F800522711 /* Build configuration list for PBXNativeTarget "PorscheAppUITests" */;
+			buildConfigurationList = 6664937D2A1D807F00522711 /* Build configuration list for PBXNativeTarget "PorscheAppUITests" */;
 			buildPhases = (
-				666493112A1D78F800522711 /* Sources */,
-				666493122A1D78F800522711 /* Frameworks */,
-				666493132A1D78F800522711 /* Resources */,
+				6664936A2A1D807F00522711 /* Sources */,
+				6664936B2A1D807F00522711 /* Frameworks */,
+				6664936C2A1D807F00522711 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				666493172A1D78F800522711 /* PBXTargetDependency */,
+				666493702A1D807F00522711 /* PBXTargetDependency */,
 			);
 			name = PorscheAppUITests;
 			productName = PorscheAppUITests;
-			productReference = 666493152A1D78F800522711 /* PorscheAppUITests.xctest */;
+			productReference = 6664936E2A1D807F00522711 /* PorscheAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		666492EC2A1D78E900522711 /* Project object */ = {
+		666493452A1D807300522711 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					666492F32A1D78EA00522711 = {
+					6664934C2A1D807400522711 = {
 						CreatedOnToolsVersion = 12.4;
 					};
-					666493092A1D78F800522711 = {
+					666493622A1D807F00522711 = {
 						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 666492F32A1D78EA00522711;
+						TestTargetID = 6664934C2A1D807400522711;
 					};
-					666493142A1D78F800522711 = {
+					6664936D2A1D807F00522711 = {
 						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 666492F32A1D78EA00522711;
+						TestTargetID = 6664934C2A1D807400522711;
 					};
 				};
 			};
-			buildConfigurationList = 666492EF2A1D78E900522711 /* Build configuration list for PBXProject "PorscheApp" */;
+			buildConfigurationList = 666493482A1D807300522711 /* Build configuration list for PBXProject "PorscheApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -214,37 +477,43 @@
 				en,
 				Base,
 			);
-			mainGroup = 666492EB2A1D78E900522711;
-			productRefGroup = 666492F52A1D78EA00522711 /* Products */;
+			mainGroup = 666493442A1D807300522711;
+			packageReferences = (
+			);
+			productRefGroup = 6664934E2A1D807400522711 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				666492F32A1D78EA00522711 /* PorscheApp */,
-				666493092A1D78F800522711 /* PorscheAppTests */,
-				666493142A1D78F800522711 /* PorscheAppUITests */,
+				6664934C2A1D807400522711 /* PorscheApp */,
+				666493622A1D807F00522711 /* PorscheAppTests */,
+				6664936D2A1D807F00522711 /* PorscheAppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		666492F22A1D78EA00522711 /* Resources */ = {
+		6664934B2A1D807400522711 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				666493042A1D78F800522711 /* LaunchScreen.storyboard in Resources */,
-				666493012A1D78F800522711 /* Assets.xcassets in Resources */,
-				666492FF2A1D78EA00522711 /* Main.storyboard in Resources */,
+				666493A32A1D900500522711 /* Config.plist in Resources */,
+				6664935D2A1D807F00522711 /* LaunchScreen.storyboard in Resources */,
+				6664935A2A1D807F00522711 /* Assets.xcassets in Resources */,
+				666493582A1D807400522711 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		666493082A1D78F800522711 /* Resources */ = {
+		666493612A1D807F00522711 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				666016CB2A2033FF0046B384 /* Error400.json in Resources */,
+				666016C62A2033BB0046B384 /* ImagesBreed.json in Resources */,
+				666016BE2A2033320046B384 /* Breeds.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		666493132A1D78F800522711 /* Resources */ = {
+		6664936C2A1D807F00522711 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -254,60 +523,86 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		666492F02A1D78EA00522711 /* Sources */ = {
+		666493492A1D807400522711 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				666492FC2A1D78EA00522711 /* ViewController.swift in Sources */,
-				666492F82A1D78EA00522711 /* AppDelegate.swift in Sources */,
-				666492FA2A1D78EA00522711 /* SceneDelegate.swift in Sources */,
+				666494202A1E921100522711 /* ApiProvider.swift in Sources */,
+				666493E82A1E5F9800522711 /* Breed.swift in Sources */,
+				666494312A1EEC6400522711 /* DogBreedDetailViewController.swift in Sources */,
+				666493BE2A1D9E8100522711 /* Coordinator.swift in Sources */,
+				666493552A1D807400522711 /* ViewController.swift in Sources */,
+				6664941B2A1E904A00522711 /* ConstantsManager.swift in Sources */,
+				666493FB2A1E6B3400522711 /* BreedCollectionCell.swift in Sources */,
+				666493512A1D807400522711 /* AppDelegate.swift in Sources */,
+				666493532A1D807400522711 /* SceneDelegate.swift in Sources */,
+				6664943F2A1FC70B00522711 /* BreedsResponse.swift in Sources */,
+				666493E22A1E5A3100522711 /* AppCoordinator.swift in Sources */,
+				666494452A1FCA0D00522711 /* DogBreedDetailViewModel.swift in Sources */,
+				6664944B2A1FEB4D00522711 /* ImageCache.swift in Sources */,
+				666493D72A1DA63100522711 /* BreedsViewController.swift in Sources */,
+				666016E02A2042A10046B384 /* UIViewController+Extension.swift in Sources */,
+				666494602A20045900522711 /* CarrouselCell.swift in Sources */,
+				666494132A1E8BED00522711 /* DogService.swift in Sources */,
+				6664940A2A1E6F8F00522711 /* UICollectionView+Extension.swift in Sources */,
+				6664945B2A2002F000522711 /* CarrouselLayout.swift in Sources */,
+				666016DB2A2042310046B384 /* BreedsViewController+ErrorHandling.swift in Sources */,
+				666494502A1FEB8E00522711 /* ImageLoader.swift in Sources */,
+				666493D02A1DA45D00522711 /* DogBreedDetailCoordinator.swift in Sources */,
+				666494052A1E6F2D00522711 /* BreedsViewModel.swift in Sources */,
+				666493F32A1E679F00522711 /* Dimensions.swift in Sources */,
+				6664942B2A1EC35200522711 /* UIImageView+Extension.swift in Sources */,
+				666493C42A1DA34900522711 /* BreedsCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		666493062A1D78F800522711 /* Sources */ = {
+		6664935F2A1D807F00522711 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6664930F2A1D78F800522711 /* PorscheAppTests.swift in Sources */,
+				666493682A1D807F00522711 /* PorscheAppTests.swift in Sources */,
+				666016AD2A20328E0046B384 /* StubGenerator.swift in Sources */,
+				666016D02A203F4D0046B384 /* MockDogService.swift in Sources */,
+				666016A72A2032010046B384 /* BreedsViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		666493112A1D78F800522711 /* Sources */ = {
+		6664936A2A1D807F00522711 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6664931A2A1D78F800522711 /* PorscheAppUITests.swift in Sources */,
+				666493732A1D807F00522711 /* PorscheAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6664930C2A1D78F800522711 /* PBXTargetDependency */ = {
+		666493652A1D807F00522711 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 666492F32A1D78EA00522711 /* PorscheApp */;
-			targetProxy = 6664930B2A1D78F800522711 /* PBXContainerItemProxy */;
+			target = 6664934C2A1D807400522711 /* PorscheApp */;
+			targetProxy = 666493642A1D807F00522711 /* PBXContainerItemProxy */;
 		};
-		666493172A1D78F800522711 /* PBXTargetDependency */ = {
+		666493702A1D807F00522711 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 666492F32A1D78EA00522711 /* PorscheApp */;
-			targetProxy = 666493162A1D78F800522711 /* PBXContainerItemProxy */;
+			target = 6664934C2A1D807400522711 /* PorscheApp */;
+			targetProxy = 6664936F2A1D807F00522711 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		666492FD2A1D78EA00522711 /* Main.storyboard */ = {
+		666493562A1D807400522711 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				666492FE2A1D78EA00522711 /* Base */,
+				666493572A1D807400522711 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		666493022A1D78F800522711 /* LaunchScreen.storyboard */ = {
+		6664935B2A1D807F00522711 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				666493032A1D78F800522711 /* Base */,
+				6664935C2A1D807F00522711 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -315,7 +610,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		6664931C2A1D78F800522711 /* Debug */ = {
+		666493752A1D807F00522711 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -376,7 +671,7 @@
 			};
 			name = Debug;
 		};
-		6664931D2A1D78F800522711 /* Release */ = {
+		666493762A1D807F00522711 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -431,7 +726,7 @@
 			};
 			name = Release;
 		};
-		6664931F2A1D78F800522711 /* Debug */ = {
+		666493782A1D807F00522711 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -439,6 +734,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 47588266MJ;
 				INFOPLIST_FILE = PorscheApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -450,7 +746,7 @@
 			};
 			name = Debug;
 		};
-		666493202A1D78F800522711 /* Release */ = {
+		666493792A1D807F00522711 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -458,6 +754,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 47588266MJ;
 				INFOPLIST_FILE = PorscheApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,7 +766,7 @@
 			};
 			name = Release;
 		};
-		666493222A1D78F800522711 /* Debug */ = {
+		6664937B2A1D807F00522711 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -491,7 +788,7 @@
 			};
 			name = Debug;
 		};
-		666493232A1D78F800522711 /* Release */ = {
+		6664937C2A1D807F00522711 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -513,7 +810,7 @@
 			};
 			name = Release;
 		};
-		666493252A1D78F800522711 /* Debug */ = {
+		6664937E2A1D807F00522711 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -533,7 +830,7 @@
 			};
 			name = Debug;
 		};
-		666493262A1D78F800522711 /* Release */ = {
+		6664937F2A1D807F00522711 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -556,43 +853,50 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		666492EF2A1D78E900522711 /* Build configuration list for PBXProject "PorscheApp" */ = {
+		666493482A1D807300522711 /* Build configuration list for PBXProject "PorscheApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6664931C2A1D78F800522711 /* Debug */,
-				6664931D2A1D78F800522711 /* Release */,
+				666493752A1D807F00522711 /* Debug */,
+				666493762A1D807F00522711 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6664931E2A1D78F800522711 /* Build configuration list for PBXNativeTarget "PorscheApp" */ = {
+		666493772A1D807F00522711 /* Build configuration list for PBXNativeTarget "PorscheApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6664931F2A1D78F800522711 /* Debug */,
-				666493202A1D78F800522711 /* Release */,
+				666493782A1D807F00522711 /* Debug */,
+				666493792A1D807F00522711 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		666493212A1D78F800522711 /* Build configuration list for PBXNativeTarget "PorscheAppTests" */ = {
+		6664937A2A1D807F00522711 /* Build configuration list for PBXNativeTarget "PorscheAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				666493222A1D78F800522711 /* Debug */,
-				666493232A1D78F800522711 /* Release */,
+				6664937B2A1D807F00522711 /* Debug */,
+				6664937C2A1D807F00522711 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		666493242A1D78F800522711 /* Build configuration list for PBXNativeTarget "PorscheAppUITests" */ = {
+		6664937D2A1D807F00522711 /* Build configuration list for PBXNativeTarget "PorscheAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				666493252A1D78F800522711 /* Debug */,
-				666493262A1D78F800522711 /* Release */,
+				6664937E2A1D807F00522711 /* Debug */,
+				6664937F2A1D807F00522711 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		666493902A1D86B000522711 /* PorscheApiNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PorscheApiNetwork;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 666492EC2A1D78E900522711 /* Project object */;
+	rootObject = 666493452A1D807300522711 /* Project object */;
 }

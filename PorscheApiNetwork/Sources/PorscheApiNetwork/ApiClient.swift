@@ -9,22 +9,25 @@ import Foundation
 import Combine
 
 final public class ApiClient {
-    typealias Parameters = [String: String]
+    public typealias Parameters = [String: String]
     
     private let baseURL: URL
     private let apiKeyProvider: ApiKeyProvider?
-    private var decoder : JSONDecoder!
+    private var decoder: JSONDecoder!
     
-    init?(baseURLString: String, keyProvider: ApiKeyProvider? = nil) {
+    public init?(baseURLString: String,
+                 keyProvider: ApiKeyProvider? = nil,
+                 decoderStrategy: JSONDecoder.KeyDecodingStrategy? = nil) {
         guard let url = URL(string: baseURLString) else {
             return nil
         }
         self.baseURL = url
         self.apiKeyProvider = keyProvider
         self.decoder = JSONDecoder()
+        if let strategy = decoderStrategy { decoder.keyDecodingStrategy = strategy }
     }
     
-    func Get<S: Decodable>(endpoint: Endpoint,
+    public func Get<S: Decodable>(endpoint: Endpoint,
                            parameters: Parameters = [:]) -> AnyPublisher<Result<S, APIError>, Never> {
         let queryURL = baseURL.appendingPathComponent(endpoint.path())
         var components = URLComponents(url: queryURL, resolvingAgainstBaseURL: true)!
@@ -35,9 +38,14 @@ final public class ApiClient {
         }
         var request = URLRequest(url: components.url!)
         request.httpMethod = HttpMethod.get.rawValue
+        if let provider = apiKeyProvider {
+            request.addValue(provider.apiKey, forHTTPHeaderField: "x-api-key")
+        }
         return URLSession.shared.dataTaskPublisher(for: request)
-            .map({ $0.data})
-            .print()
+            .map({ (data: Data, response: URLResponse) -> Data in
+                // print("RESPONSE DATA: \(String(describing: String(data: data, encoding: .utf8)))")
+                return data
+            })
             .decode(type: S.self, decoder: decoder)
             .map({ Result.success($0) })
             .catch({ error -> AnyPublisher<Result<S, APIError>, Never> in
@@ -46,7 +54,7 @@ final public class ApiClient {
             .eraseToAnyPublisher()
     }
     
-    func Post<S: Decodable, E: Encodable>(endpoint: Endpoint,
+    public func Post<S: Decodable, E: Encodable>(endpoint: Endpoint,
                            parameter: E) -> AnyPublisher<Result<S, APIError>, Never> {
         let queryURL = baseURL.appendingPathComponent(endpoint.path())
         guard let httpBody = try? JSONEncoder().encode(parameter) else {
@@ -56,7 +64,9 @@ final public class ApiClient {
         request.httpMethod = HttpMethod.post.rawValue
         request.httpBody = httpBody
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
+        if let provider = apiKeyProvider {
+            request.addValue(provider.apiKey, forHTTPHeaderField: "x-api-key")
+        }
         return URLSession.shared.dataTaskPublisher(for: request)
             .map({ $0.data})
             .print()
@@ -77,19 +87,14 @@ internal enum HttpMethod: String {
 public enum Endpoint {
     // for Dogs
     case breeds
-    
-    // for Rick
-    case characters
-    case characterDetail(charId: Int)
+    case breedPhotos
         
     func path() -> String {
         switch self {
         case .breeds:
             return "/breeds"
-        case .characters:
-            return "character"
-        case let .characterDetail(charId):
-            return "/character/\(charId)"
+        case .breedPhotos:
+            return "/images/search"
         }
     }
 }
